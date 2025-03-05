@@ -7,25 +7,14 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    
-    private void Awake()
+
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(message:"你也開始Awake");
-    }
-    
-    private void Start()
-    {
-        Debug.Log(message:"我在開始Start");
-        
+        Debug.Log(message:"OnTriggerEnter");
     }
 
-    private void OnEnable()
+    private void OnCollisionEnter(Collision other)
     {
-        Debug.Log(message:"她也開始OnEnable");
-    }
-
-    private void OnDisable()
-    {
-        Debug.Log(message:"他也開始OnDisable");
+        Debug.Log(message:"OnCollisionEnter");
     }
 }
