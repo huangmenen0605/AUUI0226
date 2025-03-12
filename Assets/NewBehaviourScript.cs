@@ -4,6 +4,8 @@ public class NewBehaviourScript : MonoBehaviour
 {
     // Start is called before the first frame update
 
+   
+
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(message:"OnTriggerEnter");
@@ -12,5 +14,6 @@ public class NewBehaviourScript : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         Debug.Log(message:"OnCollisionEnter");
+        other.gameObject.SetActive(false);
     }
 }
