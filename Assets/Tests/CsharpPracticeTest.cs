@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using UnityEngine;
 
-public class TestScript
+public class CsharpPracticeTest
 {
     [Test(Description = "測試兩個數字相加")]
     [TestCase(2,2,4)]
@@ -10,9 +10,9 @@ public class TestScript
     [TestCase(-1,-3,-4)]
     public void Add_Two_Number(int a, int b, int expected)
     {
-        TimeConverter timeConverter = new TimeConverter();
+        CsharpPractice csharpPractice = new CsharpPractice();
 
-        int result = timeConverter.Add(a,b);
+        int result = csharpPractice.Add(a,b);
 
         Assert.AreEqual(expected, actual: result);
     }
