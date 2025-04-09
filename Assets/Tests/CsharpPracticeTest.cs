@@ -16,4 +16,19 @@ public class CsharpPracticeTest
 
         Assert.AreEqual(expected, actual: result);
     }
+
+    [Test(Description = "取得語言本地化文字")]
+    [TestCase(CsharpPractice.Language.英文轉中文,  "Apple" ,  "蘋果")]
+    [TestCase(CsharpPractice.Language.英文轉中文 , "Banana" , "香蕉")]
+    [TestCase(CsharpPractice.Language.中文轉英文 , "蘋果" ,  "Apple")]
+    [TestCase(CsharpPractice.Language.中文轉英文 , "香蕉" , "Banana")]
+    public void GetLocalizationText(CsharpPractice.Language language ,string key , string expectedText)
+    {
+        var csharpPractice = new CsharpPractice();
+
+        var text = csharpPractice.GetLocalizationText(language,key);
+
+        Assert.AreEqual(expected: expectedText, actual: text);
+    }
+    
 }
